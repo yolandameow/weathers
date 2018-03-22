@@ -10,14 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var service: Service!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        service=Service()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func searchBtn(_ sender: Any) {
+        service.getEoid(cityName: "london")
+//        service.getWeather(eoid: "44418")
     }
 
 
