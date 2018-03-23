@@ -33,7 +33,6 @@
 		C3E71D6B2063352200A1F216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E71D692063352200A1F216 /* LaunchScreen.storyboard */; };
 		C3E71D762063352200A1F216 /* weathersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E71D752063352200A1F216 /* weathersTests.swift */; };
 		C3E71D8120633F5900A1F216 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E71D8020633F5900A1F216 /* Service.swift */; };
-		C3E71D8220633F5900A1F216 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E71D8020633F5900A1F216 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +153,17 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		C3D740372064A9E000AEB4B6 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				C3591F8B20636B28000AC2E0 /* Weather.swift */,
+				C350A9B02063615D002FA7EB /* City.swift */,
+				C3591F8920636A62000AC2E0 /* Forecast.swift */,
+			);
+			name = objects;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C3E71D542063352200A1F216 = {
 			isa = PBXGroup;
 			children = (
@@ -181,13 +191,11 @@
 				C3E71D602063352200A1F216 /* AppDelegate.swift */,
 				C3E71D622063352200A1F216 /* ViewController.swift */,
 				C3E71D642063352200A1F216 /* Main.storyboard */,
+				C3E71D8020633F5900A1F216 /* Service.swift */,
 				C3E71D672063352200A1F216 /* Assets.xcassets */,
 				C3E71D692063352200A1F216 /* LaunchScreen.storyboard */,
 				C3E71D6C2063352200A1F216 /* Info.plist */,
-				C3E71D8020633F5900A1F216 /* Service.swift */,
-				C350A9B02063615D002FA7EB /* City.swift */,
-				C3591F8920636A62000AC2E0 /* Forecast.swift */,
-				C3591F8B20636B28000AC2E0 /* Weather.swift */,
+				C3D740372064A9E000AEB4B6 /* objects */,
 			);
 			path = weathers;
 			sourceTree = "<group>";
@@ -322,12 +330,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-weathers-weathersTests/Pods-weathers-weathersTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-weathersTests/Pods-weathersTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,7 +455,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E71D762063352200A1F216 /* weathersTests.swift in Sources */,
-				C3E71D8220633F5900A1F216 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +636,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z53TEUHT99;
 				INFOPLIST_FILE = weathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.utoronto.cs.weathersTests;
@@ -642,6 +654,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z53TEUHT99;
 				INFOPLIST_FILE = weathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.utoronto.cs.weathersTests;

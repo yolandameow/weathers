@@ -23,13 +23,17 @@ class ViewController: UIViewController,UISearchBarDelegate {
     @IBOutlet weak var weatherLabel: UILabel!
     private var service: Service!
     var cityId:String!
-    var historyList=["London","Boston","Toronto","New York", "Beijing"]
+    var historyList=["London","Boston","Beijing","Tokyo", "Toronto"]
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        service=Service()
         
+        super.viewDidLoad()
+        self.searchBar.delegate=self
+        self.populateLabels()
+        service=Service()
+        //Initialize the page
+        searchWeather(cityName:historyList[4])
         
     }
     
@@ -39,10 +43,11 @@ class ViewController: UIViewController,UISearchBarDelegate {
         self.historyBtn3.setTitle(historyList[2],for:.normal)
         self.historyBtn4.setTitle(historyList[1],for:.normal)
         self.historyBtn5.setTitle(historyList[0],for:.normal)
+        
     }
     
    @IBAction func searchByHistory(_ sender: UIButton) {
-    print(sender.currentTitle)
+        searchWeather(cityName:sender.currentTitle)
    }
     
     override func didReceiveMemoryWarning() {
@@ -51,30 +56,10 @@ class ViewController: UIViewController,UISearchBarDelegate {
     }
     
     func searchWeather(cityName:String!){
-        service.getEoid(cityName: cityName,completed: {
-            cities in
-            for city in cities!{
-                self.cityNameLabel.text=city.city
-                self.cityId =  "\(city.woeid ?? 0)"
-                self.service.getWeather(eoid: self.cityId,completed: {
-                    weathers in
-                    for weather in weathers!
-                    {
-                        self.weatherLabel.text=weather.weather_state_name
-                        let abbr=weather.weather_state_abbr
-                        let image = UIImage(named:abbr!)
-                        self.weatherImgView.image=image
-                        
-                        break
-                    }
-                })
-                break
-            }
-        })
-    }
-    @IBAction func searchBtn(_ sender: Any) {
-        
-        let cityName = self.searchBar.text
+        if(cityName.isEmpty){
+            print("Empty cityname. Return. ")
+            return
+        }
         
         service.getEoid(cityName: cityName,completed: {
             cities in
@@ -96,14 +81,23 @@ class ViewController: UIViewController,UISearchBarDelegate {
                 break
             }
         })
-        
     }
     
+    
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBarSearchButtonClicked")
-        print(searchBar.text)
-        searchBar.endEditing(true)
         let city=searchBar.text
+        
+        //Close keyboard
+         searchBar.endEditing(true)
+        
+        if(city!.isEmpty){
+            print("Nothing input for search")
+            return
+        }
+      
+        
+       
+        
         searchWeather(cityName:city)
         
         rotateHistory(search:city)
