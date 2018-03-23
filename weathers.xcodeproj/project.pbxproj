@@ -160,8 +160,7 @@
 				C350A9B02063615D002FA7EB /* City.swift */,
 				C3591F8920636A62000AC2E0 /* Forecast.swift */,
 			);
-			name = objects;
-			path = "New Group";
+			path = objects;
 			sourceTree = "<group>";
 		};
 		C3E71D542063352200A1F216 = {
