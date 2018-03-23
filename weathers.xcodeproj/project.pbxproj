@@ -16,6 +16,16 @@
 		C3591F8520636219000AC2E0 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3591F8620636219000AC2E0 /* ObjectMapper.framework */; };
 		C3591F8A20636A63000AC2E0 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3591F8920636A62000AC2E0 /* Forecast.swift */; };
 		C3591F8C20636B28000AC2E0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3591F8B20636B28000AC2E0 /* Weather.swift */; };
+		C3958B3B20638D50009FA2DF /* sn.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B3A20638D50009FA2DF /* sn.png */; };
+		C3958B4520638EC2009FA2DF /* lr.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B3C20638EC0009FA2DF /* lr.png */; };
+		C3958B4620638EC2009FA2DF /* t.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B3D20638EC1009FA2DF /* t.png */; };
+		C3958B4720638EC2009FA2DF /* c.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B3E20638EC1009FA2DF /* c.png */; };
+		C3958B4820638EC2009FA2DF /* hc.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B3F20638EC1009FA2DF /* hc.png */; };
+		C3958B4920638EC2009FA2DF /* hr.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B4020638EC1009FA2DF /* hr.png */; };
+		C3958B4A20638EC2009FA2DF /* h.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B4120638EC1009FA2DF /* h.png */; };
+		C3958B4B20638EC2009FA2DF /* lc.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B4220638EC1009FA2DF /* lc.png */; };
+		C3958B4C20638EC2009FA2DF /* sl.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B4320638EC1009FA2DF /* sl.png */; };
+		C3958B4D20638EC2009FA2DF /* s.png in Resources */ = {isa = PBXBuildFile; fileRef = C3958B4420638EC2009FA2DF /* s.png */; };
 		C3E71D612063352200A1F216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E71D602063352200A1F216 /* AppDelegate.swift */; };
 		C3E71D632063352200A1F216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E71D622063352200A1F216 /* ViewController.swift */; };
 		C3E71D662063352200A1F216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E71D642063352200A1F216 /* Main.storyboard */; };
@@ -52,6 +62,16 @@
 		C3591F8620636219000AC2E0 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3591F8920636A62000AC2E0 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		C3591F8B20636B28000AC2E0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		C3958B3A20638D50009FA2DF /* sn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sn.png; sourceTree = "<group>"; };
+		C3958B3C20638EC0009FA2DF /* lr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lr.png; sourceTree = "<group>"; };
+		C3958B3D20638EC1009FA2DF /* t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t.png; sourceTree = "<group>"; };
+		C3958B3E20638EC1009FA2DF /* c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c.png; sourceTree = "<group>"; };
+		C3958B3F20638EC1009FA2DF /* hc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hc.png; sourceTree = "<group>"; };
+		C3958B4020638EC1009FA2DF /* hr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hr.png; sourceTree = "<group>"; };
+		C3958B4120638EC1009FA2DF /* h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h.png; sourceTree = "<group>"; };
+		C3958B4220638EC1009FA2DF /* lc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lc.png; sourceTree = "<group>"; };
+		C3958B4320638EC1009FA2DF /* sl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sl.png; sourceTree = "<group>"; };
+		C3958B4420638EC2009FA2DF /* s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s.png; sourceTree = "<group>"; };
 		C3E71D5D2063352200A1F216 /* weathers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weathers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E71D602063352200A1F216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3E71D622063352200A1F216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +137,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C3958B3720638B90009FA2DF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C3958B3E20638EC1009FA2DF /* c.png */,
+				C3958B4120638EC1009FA2DF /* h.png */,
+				C3958B3F20638EC1009FA2DF /* hc.png */,
+				C3958B4020638EC1009FA2DF /* hr.png */,
+				C3958B4220638EC1009FA2DF /* lc.png */,
+				C3958B3C20638EC0009FA2DF /* lr.png */,
+				C3958B4420638EC2009FA2DF /* s.png */,
+				C3958B4320638EC1009FA2DF /* sl.png */,
+				C3958B3D20638EC1009FA2DF /* t.png */,
+				C3958B3A20638D50009FA2DF /* sn.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		C3E71D542063352200A1F216 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +177,7 @@
 		C3E71D5F2063352200A1F216 /* weathers */ = {
 			isa = PBXGroup;
 			children = (
+				C3958B3720638B90009FA2DF /* images */,
 				C3E71D602063352200A1F216 /* AppDelegate.swift */,
 				C3E71D622063352200A1F216 /* ViewController.swift */,
 				C3E71D642063352200A1F216 /* Main.storyboard */,
@@ -252,7 +290,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3958B4D20638EC2009FA2DF /* s.png in Resources */,
+				C3958B4B20638EC2009FA2DF /* lc.png in Resources */,
+				C3958B4620638EC2009FA2DF /* t.png in Resources */,
+				C3958B4520638EC2009FA2DF /* lr.png in Resources */,
+				C3958B4720638EC2009FA2DF /* c.png in Resources */,
+				C3958B3B20638D50009FA2DF /* sn.png in Resources */,
+				C3958B4A20638EC2009FA2DF /* h.png in Resources */,
+				C3958B4820638EC2009FA2DF /* hc.png in Resources */,
 				C3E71D6B2063352200A1F216 /* LaunchScreen.storyboard in Resources */,
+				C3958B4C20638EC2009FA2DF /* sl.png in Resources */,
+				C3958B4920638EC2009FA2DF /* hr.png in Resources */,
 				C3E71D682063352200A1F216 /* Assets.xcassets in Resources */,
 				C3E71D662063352200A1F216 /* Main.storyboard in Resources */,
 			);

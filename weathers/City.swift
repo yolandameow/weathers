@@ -12,7 +12,7 @@ import ObjectMapper
 class City:Mappable {
     
     var city: String?
-    var woeid: String?
+    var woeid: Int?
     
     required init?(map: Map){
         

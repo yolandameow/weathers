@@ -27,46 +27,55 @@ public enum WeatherAbbr: String {
 class Service {
     
     var WOE_ID="woeid"
-
-    
     var api:String = "https://www.metaweather.com/api/"
     var request : NSMutableURLRequest = NSMutableURLRequest()
     
-    func getWeather(eoid:String!){
-        let url = api+"location/"+eoid
-        let method=HTTPMethod.get
-        Alamofire.request(url, method:.get).responseArray{ (response: DataResponse<[Weather]>) in
-            switch response.result {
-            case .success:
-                print(response.result.value)
-            case .failure(let error):
-                print(0,"Error")
-                print(error)
-            }
-            if let weather = response.result.value{
-                for weather in weather{
-                    print(weather.forecasts)
-                }
-            }
-        }
+    func getToday() -> String{
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy/MM/dd"
+        let now = formatter.string(from: Date())
+        return now
+
     }
     
-    func getEoid(cityName:String!) -> String
+    
+     func getWeather(eoid:String!, completed: @escaping([Weather]?) -> ()){
+        let today=getToday()
+        print("Getting ", eoid)
+        let url = api+"location/"+eoid+"/"+today
+        print("Getting ", url)
+        Alamofire.request(url, method:.get).responseArray{ (response: DataResponse<[Weather]>) in
+           
+            switch response.result {
+            case .success:
+                print("Get Weather - Successful")
+            case .failure(let error):
+                print("Error🐱 ,",error)
+            }
+            if let weathers = response.result.value{
+                
+                completed(weathers)
+            }
+            
+        }
+        
+    }
+    
+    func getEoid(cityName:String!, completed: @escaping([City]?) -> ()) -> String
     {
-        let url = api+"location/search/?query="+cityName
-        let method=HTTPMethod.get
+        var cityNameNew=cityName.replacingOccurrences(of: " ", with: "%20")
+        let url = api+"location/search/?query="+cityNameNew
         Alamofire.request(url, method:.get).responseArray{ (response: DataResponse<[City]>) in
             switch response.result {
             case .success:
-                print(response.result.value)
+                print("Get City - Successful")
             case .failure(let error):
-                print(0,"Error")
-                print(error)
+                print("Error🐱 ,",error)
             }
+            
             if let cities = response.result.value{
-                for city in cities{
-                    print(city.city)
-                }
+               completed(cities)
             }
         }
         return ""

@@ -11,7 +11,7 @@ import Foundation
 import ObjectMapper
 class Forecast:Mappable{
     
-    var id:long?
+    var id:String?
     var weather_state_name:String?
     var weather_state_abbr:String?
     var applicable_date:String?

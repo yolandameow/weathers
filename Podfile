@@ -6,9 +6,8 @@ target 'weathers' do
   use_frameworks!
 
   # Pods for weathers
-  pod 'Alamofire', '~> 4.7'
-  pod 'AlamofireObjectMapper', '~> 5.0'
-
+   pod 'AlamofireObjectMapper', '~> 5.0'
+   pod 'Alamofire', '~> 4.7'
   target 'weathersTests' do
     inherit! :search_paths
     # Pods for testing
